@@ -1,0 +1,22 @@
+ {if $logged}
+           	
+            
+            <span>{$customerName}</span> <br />
+				(<a href="{$base_dir}index.php?mylogout" title="{l s='Log out'}">{l s='Log out'}</a>)
+            
+            	<a href="{$base_dir_ssl}my-account.php" title="{l s='Your Account'}">{l s='Your Account'}</a>
+                <a href="{$base_dir_ssl}order.php" title="{l s='My cart'}">{l s='My cart'}</a>
+            
+            {else}
+            <form action="{$base_dir_ssl}authentication.php" method="post">
+      		 	 <h2>MON COMPTE</h2>
+                 Login :<br />
+                 <input type="text" class="ipt" name="email" />
+                 <div class="h-10"></div>
+                 Mot de passe :<br />
+                 <input type="text" class="ipt" name="passwd" />
+                  <div class="h-10"></div>
+                  <span class="btn m-2"><span><input type="submit" value="  CONNEXION  " /></span></span>
+            </form>
+            
+            {/if}

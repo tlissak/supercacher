@@ -1,0 +1,29 @@
+<?php /* Smarty version 2.6.20, created on 2010-06-18 12:57:24
+         compiled from ../../../GUI//inc-private/auth_js.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'intval', '../../../GUI//inc-private/auth_js.tpl', 3, false),array('modifier', 'escape', '../../../GUI//inc-private/auth_js.tpl', 9, false),)), $this); ?>
+<script type="text/javascript">
+// <![CDATA[
+idSelectedCountry = <?php if (isset ( $_POST['id_state'] )): ?><?php echo ((is_array($_tmp=$_POST['id_state'])) ? $this->_run_mod_handler('intval', true, $_tmp) : intval($_tmp)); ?>
+<?php else: ?>false<?php endif; ?>;
+countries = new Array();
+<?php $_from = $this->_tpl_vars['countries']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['country']):
+?>
+	<?php if (isset ( $this->_tpl_vars['country']['states'] )): ?>
+		countries[<?php echo ((is_array($_tmp=$this->_tpl_vars['country']['id_country'])) ? $this->_run_mod_handler('intval', true, $_tmp) : intval($_tmp)); ?>
+] = new Array();
+		<?php $_from = $this->_tpl_vars['country']['states']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['states'] = array('total' => count($_from), 'iteration' => 0);
+if ($this->_foreach['states']['total'] > 0):
+    foreach ($_from as $this->_tpl_vars['state']):
+        $this->_foreach['states']['iteration']++;
+?>
+			countries[<?php echo ((is_array($_tmp=$this->_tpl_vars['country']['id_country'])) ? $this->_run_mod_handler('intval', true, $_tmp) : intval($_tmp)); ?>
+]['<?php echo ((is_array($_tmp=$this->_tpl_vars['state']['id_state'])) ? $this->_run_mod_handler('intval', true, $_tmp) : intval($_tmp)); ?>
+'] = '<?php echo ((is_array($_tmp=$this->_tpl_vars['state']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'htmlall', 'UTF-8') : smarty_modifier_escape($_tmp, 'htmlall', 'UTF-8')); ?>
+';
+		<?php endforeach; endif; unset($_from); ?>
+	<?php endif; ?>
+<?php endforeach; endif; unset($_from); ?>
+//]]>
+</script>

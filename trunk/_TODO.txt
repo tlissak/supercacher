@@ -1,0 +1,14 @@
+- loginbox{when is loged : show user info nicely}
+- search.php {productList:show-currect}
+- product-list{ view-click: ajax content-only show it right}
++ home right box{ cart , login : at home and category}
++ search ajax { a:block}
++ product-list{ show:cachrout}
++ product-list{ dispo:txtsmall+colorlight}
++ product-list{ on-search:showit right}
++ product-list{ cart-click: ajax}
++ ajaxsearch{fix:price}
++ ajaxsearch plugin conflict when real searching url [enter]
++ ajaxcart add clicks to delete 
++ ajaxcart hover hover ?
++ ajaxcart show total add onload

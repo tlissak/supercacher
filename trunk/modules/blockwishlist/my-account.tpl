@@ -1,0 +1,1 @@
+{include file="$GUI_THEME_PATH/modules/blockwishlist/my-account.asp"}

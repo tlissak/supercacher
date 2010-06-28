@@ -1,0 +1,80 @@
+@import url('global.css') ;
+/*@import url('block.css') ;*/
+body{ padding:0; margin:0; font:12px Arial, Verdana, Tahoma, sans-serif; background:url(../images/top.png) top repeat-x; background-color:#fefefc}
+
+.wrapper{ width:886px; margin:0 auto; clear:both}
+
+#header{ background:url(../images/header.png) top no-repeat ;}
+#logo{ float:left; display:block; margin:5px 0 0 0;}
+
+#top-cart{height:32px; width:130px; float:right;}
+#top-links{height:32px; width:320px; float:right;margin-right:45px;}
+
+#top-links ul{ padding:7px 0 0 14px; margin:0;}
+#top-links li{ padding:0; margin:0 7px; list-style:none; float:left}
+#top-links img{ margin:1px 6px 0 3px ; display:block; float:left}
+#top-links a{ padding:3px 9px 3px 0; display:block; white-space:nowrap}
+
+#top-cart-bag{ margin:1px 2px; float:left }
+#top-cart-txt{margin:8px 0  0 3px; float:left; color:#666}
+
+#menu{	height:34px;	padding:0; clear:both; background:url(../images/menu-bg.png) repeat-x; margin-top:6px;}
+#menu ul{ padding:0; margin:0}
+#menu li{ float:left; list-style:none; padding:0; margin:0; position:relative;}
+
+#menu a{line-height:34px;color:#fff ; height:34px; padding:0 29px; background:url(../images/menu-sep.png) 100% no-repeat}
+#menu a:hover{ color:#bbd34a;}
+#menu li.search { float:right; background:url(../images/search-bg.png) center no-repeat; width:200px; height:34px}
+
+.search-ipt{border:none; margin:8px 0 0 15px; width:115px; height:18px; font-size:12px ; line-height:16px; padding:0; border:0 none}
+
+.menu-r{height:34px; float:right; width:7px; background:url(../images/menu-r.png)}
+.menu-l{height:34px; float:left; width:7px; background:url(../images/menu-l.png)}
+
+#main{ min-height:350px; background-color:#fefefc}
+
+.outer{background:url(../images/illust.png) left repeat-x; width:1055px; margin:0 auto}
+
+#nav{ padding:0; margin:0; float:left}
+#nav li{ list-style:none; padding:0; margin:0; line-height:63px; background:url(../images/nav-item-bg.png) no-repeat; height:63px; text-align:center; width:192px; color:#FFF }
+ 
+ 
+
+.ipt{  }
+.ipt:hover,.ipt:focus{ background:#fff;}
+
+
+
+.btn{display:block;background:url(../images/btn.png) top right no-repeat;line-height:25px;height:25px ; margin:0 ; padding:0; float:left}
+
+.btn span{line-height:25px;height:25px;}
+.btn input{ color:#FFF;  border:0;  cursor:pointer; font:12px Arial, Helvetica, sans-serif; background:url(../images/btn.png) top left no-repeat;height:25px;  margin:0 9px 0 0px; padding:0px 9px 0px 18px;line-height:25px;display:block;}
+.btn a{ color:#FFF; border:0; cursor:pointer; background:url(../images/btn.png) top left no-repeat;height:25px; margin:0 9px 0 0px; padding:0px 9px 0px 18px; line-height:25px; display:block}
+
+.btn-light{ background-position:100% -25px}
+.btn-light input{ background-position:0 -25px}
+.btn-light a{ background-position:0 -25px}
+
+
+.btn-dark{ background-position:100% -50px}
+.btn-dark input{ background-position:0 -50px}
+.btn-dark a{ background-position:0 -50px}
+
+.btn-ipt{ background-position:100% -75px; line-height:11px}
+.btn-ipt input{ background-position:0 -75px; color:#333; cursor:text; font-size:11px; line-height:11px}
+
+
+
+#home-pdt{ padding:0;margin:0; color:#666}
+#home-pdt li{ padding:0; margin:0; float:left ; list-style:none; height:250px; width:170px; border:#CCC 1px solid; text-align:center}
+#home-pdt a{ color:#666}
+#home-pdt img{ display:block; margin:0 auto}
+#home-pdt h3{ font-size:12px; font-weight:normal}
+
+.home-box{ float:left; width:256px; height:169px; background-repeat:no-repeat;}
+ 
+ 
+.bottom{ background:url(../images/bottom.png) repeat-x; min-height:130px;}
+#footer{ min-height:40px; color:#666; clear:both}
+/*#footer a{ color:#666}*/
+
