@@ -1,1 +1,1 @@
-{include file="$GUI_THEME_PATH/modules/blockwishlist/managewishlist.asp"}
+{include file="$tpl_dir/modules/blockwishlist/managewishlist.asp"}

@@ -1,1 +1,1 @@
-{include file="$GUI_THEME_PATH/modules/cheque/payment_execution.asp"}
+{include file="$tpl_dir/modules/cheque/payment_execution.asp"}

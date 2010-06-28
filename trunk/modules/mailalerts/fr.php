@@ -21,7 +21,7 @@ $_MODULE['<{mailalerts}prestashop>mailalerts_ebc3ccf8441dba3c1615afa6acb3282a'] 
 $_MODULE['<{mailalerts}prestashop>mailalerts_c009546071b59092716ba006f307c6af'] = 'Recevoir une notification si la quantité du produit est en dessous du seuil d\'alerte';
 $_MODULE['<{mailalerts}prestashop>mailalerts_af097c4096dc45754451f6f656dd1ee0'] = 'Seuil d\'alerte:';
 $_MODULE['<{mailalerts}prestashop>mailalerts_65d0578157fd293e96f55f2d9228c07b'] = 'Quantité pour laquelle le produit est considéré hors stock';
-$_MODULE['<{mailalerts}prestashop>mailalerts_6d219dad708e4358c90d1ae2572abcb5'] = 'Envoyer ces emails : ';
+$_MODULE['<{mailalerts}prestashop>mailalerts_95ba1239ebac05e1d10d5dae049e32f5'] = 'Envoyer à cette adresse email :';
 $_MODULE['<{mailalerts}prestashop>mailalerts_16a0cf0a0304df1b8ce3cb363eff0847'] = 'Une adresse email par ligne';
 $_MODULE['<{mailalerts}prestashop>mailalerts_f77ed609e48d550f0166dfbafc102710'] = 'ex :';
 $_MODULE['<{mailalerts}prestashop>mailalerts_c1ee76f076a5b97e3b4b0c0e5703246e'] = 'Mise à jour des réglages impossible';
@@ -29,15 +29,11 @@ $_MODULE['<{mailalerts}prestashop>mailalerts_f4d1ea475eaa85102e2b4e6d95da84bd'] 
 $_MODULE['<{mailalerts}prestashop>mailalerts_c888438d14855d7d96a2724ee9c306bd'] = 'Configuration mise à jour';
 $_MODULE['<{mailalerts}prestashop>mailalerts_2554b39ea61245301ddb2b8305d7e6fa'] = 'Merci d\'entrer une (ou plusieurs) addresse(s) email';
 $_MODULE['<{mailalerts}prestashop>mailalerts_29aae9c646337554f4de7ae29050c39f'] = 'E-mail invalide : ';
-$_MODULE['<{mailalerts}prestashop>my-account_4edfd10d0bb5f51e0fd2327df608b5a8'] = 'Mes alertes';
-$_MODULE['<{mailalerts}prestashop>my-account_abca7cba75e5a9ff86b1490f32891f82'] = 'alertes';
 $_MODULE['<{mailalerts}prestashop>myalerts_d95cf4ab2cbf1dfb63f066b50558b07d'] = 'Mon compte';
 $_MODULE['<{mailalerts}prestashop>myalerts_4edfd10d0bb5f51e0fd2327df608b5a8'] = 'Mes alertes';
 $_MODULE['<{mailalerts}prestashop>myalerts_deb10517653c255364175796ace3553f'] = 'Produit';
 $_MODULE['<{mailalerts}prestashop>myalerts_f2a6c498fb90ee345d997f888fce3b18'] = 'Supprimer';
 $_MODULE['<{mailalerts}prestashop>myalerts_074c07016d3e5a9f011aa8e62abe4517'] = 'Vous n\'avez souscrit à aucune alerte.';
-$_MODULE['<{mailalerts}prestashop>myalerts_0b3db27bc15f682e92ff250ebb167d4b'] = 'Retour à votre compte';
-$_MODULE['<{mailalerts}prestashop>myalerts_8cf04a9734132302f96da8e113e80ce5'] = 'Accueil';
 $_MODULE['<{mailalerts}prestashop>product_416f61a2ce16586f8289d41117a2554e'] = 'votre e-mail';
 $_MODULE['<{mailalerts}prestashop>product_546e02eaa9a986c83cc347e273269f2c'] = 'Prévenez-moi lorsque le produit est disponible';
 $_MODULE['<{mailalerts}prestashop>product_61172eb93737ebf095d3fa02119ce1df'] = 'Demande de notification enregistrée';
