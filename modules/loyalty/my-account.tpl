@@ -1,1 +1,1 @@
-{include file="$GUI_THEME_PATH/modules/loyalty/my-account.asp"}
+{include file="$tpl_dir/modules/loyalty/my-account.asp"}

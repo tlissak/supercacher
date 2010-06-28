@@ -204,11 +204,6 @@ else
 		'roundMode' => intval(Configuration::get('PS_PRICE_ROUND_MODE')),
 		'use_taxes' => intval(Configuration::get('PS_TAX'))));
 }
-////////////////////////////////////
-// 	GUI theme
-////////////////////////////////////
-include('GUI/inc-global/init.php') ;
-
 
 /* Display a maintenance page if shop is closed */
 if (isset($maintenance) AND (!isset($_SERVER['REMOTE_ADDR']) OR !in_array($_SERVER['REMOTE_ADDR'], explode(',', Configuration::get('PS_MAINTENANCE_IP')))))

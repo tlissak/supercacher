@@ -1,1 +1,0 @@
-{ include file="$GUI_THEME_PATH/modules/blockcartmod/blockcart.html" }

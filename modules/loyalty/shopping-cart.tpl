@@ -1,1 +1,1 @@
-{include file="$GUI_THEME_PATH/modules/loyalty/shopping-cart.asp"}
+{include file="$tpl_dir/modules/loyalty/shopping-cart.asp"}
