@@ -2,8 +2,9 @@
 - search.php {productList:show-currect}
 - product.php{ addRightColmun}
 + product-list{ view-click: ajax content-only show it right}
-- AdminTranslations.php line 499-500 { add subfolders to scandir so he will loop them to.}
++ AdminTranslations.php line 499-500 { add subfolders to scandir so he will loop them to.}
 - footer{ build}
++ categorysort module {bug fix}
 + home right box{ cart , login : at home and category}
 + search ajax { a:block}
 + product-list{ show:cachrout}

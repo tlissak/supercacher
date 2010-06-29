@@ -37,7 +37,7 @@
 
 <div class="clear spacer"></div>
 
-<div style="border-top:#F69 1px solid; height:10px"></div>
+<div class="h-10"></div>
 
 <div class="w-1-3 left">
 &copy; Copyright 2010 Titoys / Tous droits
