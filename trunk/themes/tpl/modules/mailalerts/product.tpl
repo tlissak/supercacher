@@ -1,8 +1,8 @@
 <!-- MODULE MailAlerts -->
 {if $email}
-	<input type="text" id="oos_customer_email" name="customer_email" size="20" value="{l s='your e-mail' mod='mailalerts'}" class="mailalerts_oos_email" onclick="clearText();" /><br />
+	<input type="text" id="oos_customer_email" name="customer_email" size="20" value="{l s='your e-mail'}" class="mailalerts_oos_email" onclick="clearText();" /><br />
 {/if}
-<a href="#" onclick="return addNotification();" id="mailalert_link">{l s='Notify me when available' mod='mailalerts'}</a>
+<a href="#" onclick="return addNotification();" id="mailalert_link">{l s='Notify me when available'}</a>
 <script type="text/javascript">{literal}
 // <![CDATA[
 oosHookJsCodeFunctions.push('oosHookJsCodeMailAlert');
@@ -39,7 +39,7 @@ function  addNotification() {
 			if (msg == '1') {
 				$('#mailalert_link').hide();
 				$('#oos_customer_email').hide();
-				$('#oosHook').html("{l s='Request notification registered' mod='mailalerts'}");
+				$('#oosHook').html("{l s='Request notification registered'}");
 			}
 		}
 	});

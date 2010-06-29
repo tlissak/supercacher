@@ -1,4 +1,4 @@
-{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account' mod='mailalerts'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My alerts' mod='mailalerts'}{/capture}
+{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account' }</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My alerts' }{/capture}
 <!-- #include file="inc-global/init.php" -->
 
 <!-- #include file="css/style.css" -->
@@ -25,7 +25,7 @@
 	</div>
 	<div class="account-right">
 		<div class="account-content-inner">
-				<h2>{l s='My alerts' mod='mailalerts'}</h2>
+				<h2>{l s='My alerts'}</h2>
 
 				{include file="$tpl_dir/inc-global/errors.tpl"}
 				{if $id_customer|intval neq 0}
@@ -34,8 +34,8 @@
 						<table class="std">
 							<thead>
 								<tr>
-									<th class="first_item">{l s='Product' mod='mailalerts'}</th>
-									<th class="last_item" style="width:20px;">{l s='Delete' mod='mailalerts'}</th>
+									<th class="first_item">{l s='Product' }</th>
+									<th class="last_item" style="width:20px;">{l s='Delete' }</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -49,7 +49,7 @@
 								{/if}</span>
 								</td>
 								<td class="align_center">
-									<a href="{$base_dir_ssl}modules/mailalerts/myalerts.php?action=delete&id_product={$product.id_product}{if $product.id_product_attribute}&id_product_attribute={$product.id_product_attribute}{/if}"><img src="{$content_dir}modules/mailalerts/img/delete.gif" alt="{l s='Delete' mod='mailalerts'}" /></a>
+									<a href="{$base_dir_ssl}modules/mailalerts/myalerts.php?action=delete&id_product={$product.id_product}{if $product.id_product_attribute}&id_product_attribute={$product.id_product_attribute}{/if}"><img src="{$content_dir}modules/mailalerts/img/delete.gif" alt="{l s='Delete' }" /></a>
 								</td>
 							</tr>
 							</tbody>
@@ -58,7 +58,7 @@
 					</div>
 					<div id="block-order-detail">&nbsp;</div>
 					{else}
-						<p class="warning">{l s='You are not subscribed to any alerts.' mod='mailalerts'}</p>
+						<p class="warning">{l s='You are not subscribed to any alerts.' }</p>
 					{/if}
 				{/if}
 		</div>

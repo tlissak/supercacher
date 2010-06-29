@@ -5,7 +5,7 @@
 			<span class="quantity-formated"><span class="quantity">{$product.quantity|intval}</span>x</span>
 			<span class="btn"><span><a class="cart_block_product_name" href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category_rewrite)}" title="{$product.name|escape:'htmlall':'UTF-8'}" style="font-weight:bold;">{$product.name|truncate:13:'...'|escape:'htmlall':'UTF-8'}</a></span></span>
 			<span class="btn"><span>
-			<a class="ajax_cart_block_remove_link" href="javascript:;" onclick="javascript:WishlistCart('wishlist_block_list', 'delete', '{$product.id_product}', {$product.id_product_attribute}, '0', '{$static_token}');" title="{l s='remove this product from my wishlist' mod='blockwishlist'}">{l s='Delete'}</a></span></span>
+			<a class="ajax_cart_block_remove_link" href="javascript:;" onclick="javascript:WishlistCart('wishlist_block_list', 'delete', '{$product.id_product}', {$product.id_product_attribute}, '0', '{$static_token}');" title="{l s='remove this product from my wishlist'}">{l s='Delete'}</a></span></span>
 		</dt>
 		{if isset($product.attributes_small)}
 		<dd class="{if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if}" style="font-style:italic;margin:0 0 0 10px;">
@@ -17,9 +17,9 @@
 {else}
 	<dl class="products" style="font-size:10px;border-bottom:1px solid #fff;">
 	{if $error}
-		<dt>{l s='You must create a wishlist before adding products' mod='blockwishlist'}</dt>
+		<dt>{l s='You must create a wishlist before adding products'}</dt>
 	{else}
-		<dt>{l s='No products' mod='blockwishlist'}</dt>
+		<dt>{l s='No products'}</dt>
 	{/if}
 	</dl>
 {/if}

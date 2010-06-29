@@ -1,4 +1,4 @@
-{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account' mod='loyalty'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My loyalty points' mod='loyalty'}{/capture}
+{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My loyalty points'}{/capture}
 
 <!-- #include file="inc-global/init.php" -->
 
@@ -26,22 +26,22 @@
 	</div>
 	<div class="account-right">
 		<div class="account-content-inner">
-							<h2>{l s='My loyalty points' mod='loyalty'}</h2>
+							<h2>{l s='My loyalty points'}</h2>
 							{if $orders}
 							<div class="block-center" id="block-history">
 								{if $orders && count($orders)}
 								<table id="order-list" class="std">
 									<thead>
 										<tr>
-											<th class="first_item">{l s='Order' mod='loyalty'}</th>
-											<th class="item">{l s='Date' mod='loyalty'}</th>
-											<th class="item">{l s='Points' mod='loyalty'}</th>
-											<th class="last_item">{l s='Points Status' mod='loyalty'}</th>
+											<th class="first_item">{l s='Order'}</th>
+											<th class="item">{l s='Date'}</th>
+											<th class="item">{l s='Points'}</th>
+											<th class="last_item">{l s='Points Status'}</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr class="alternate_item">
-											<td colspan="2" class="history_method bold" style="text-align:center;">{l s='Total points available:' mod='loyalty'}</td>
+											<td colspan="2" class="history_method bold" style="text-align:center;">{l s='Total points available:'}</td>
 											<td class="history_method" style="text-align:left;">{$totalPoints|intval}</td>
 											<td class="history_method">&nbsp;</td>
 										</tr>
@@ -49,7 +49,7 @@
 									<tbody>
 									{foreach from=$orders item='order'}
 										<tr class="alternate_item">
-											<td class="history_link bold">{l s='#' mod='loyalty'}{$order.id|string_format:"%06d"}</td>
+											<td class="history_link bold">{l s='#'}{$order.id|string_format:"%06d"}</td>
 											<td class="history_date">{dateFormat date=$order.date full=1}</td>
 											<td class="history_method">{$order.points|intval}</td>
 											<td class="history_method">{$order.state|escape:'htmlall':'UTF-8'}</td>
@@ -64,23 +64,23 @@
 							</div>							
 							{if $transformation_allowed}
 							<p style="text-align:center; margin-top:20px">
-								<a href="{$base_dir}modules/loyalty/loyalty-program.php?transform-points=true" onclick="return confirm('{l s='Are you sure to want to transform your points into vouchers ?' mod='loyalty' js=1}');">{l s='Transform my points into a voucher of' mod='loyalty'} <span class="price">{convertPrice price=$voucher}</span>.</a>
+								<a href="{$base_dir}modules/loyalty/loyalty-program.php?transform-points=true" onclick="return confirm('{l s='Are you sure to want to transform your points into vouchers ?' js=1}');">{l s='Transform my points into a voucher of'} <span class="price">{convertPrice price=$voucher}</span>.</a>
 							</p>
 							{/if}
 							<br />
-							<h2>{l s='My vouchers from loyalty points' mod='loyalty'}</h2>
+							<h2>{l s='My vouchers from loyalty points'}</h2>
 							{if $nbDiscounts}
 							<div class="block-center" id="block-history">
 								<table id="order-list" class="std">
 									<thead>
 										<tr>
-											<th class="first_item">{l s='Created' mod='loyalty'}</th>
-											<th class="item">{l s='Value' mod='loyalty'}</th>
-											<th class="item">{l s='Code' mod='loyalty'}</th>
-											<th class="item">{l s='Valid from' mod='loyalty'}</th>
-											<th class="item">{l s='Valid until' mod='loyalty'}</th>
-											<th class="item">{l s='Status' mod='loyalty'}</th>
-											<th class="last_item">{l s='Details' mod='loyalty'}</th>
+											<th class="first_item">{l s='Created'}</th>
+											<th class="item">{l s='Value'}</th>
+											<th class="item">{l s='Code'}</th>
+											<th class="item">{l s='Valid from'}</th>
+											<th class="item">{l s='Valid until'}</th>
+											<th class="item">{l s='Status'}</th>
+											<th class="last_item">{l s='Details'}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -92,13 +92,13 @@
 												{elseif $discount->id_discount_type == 2}
 													{displayPrice price=$discount->value currency=$discount->id_currency}
 												{else}
-													{l s='Free shipping' mod='loyalty'}
+													{l s='Free shipping'}
 												{/if}</span></td>
 											<td class="history_method bold">{$discount->name}</td>
 											<td class="history_date">{dateFormat date=$discount->date_from}</td>
 											<td class="history_date">{dateFormat date=$discount->date_to}</td>
-											<td class="history_method bold">{if $discount->quantity > 0}{l s='To use' mod='loyalty'}{else}{l s='Used' mod='loyalty'}{/if}</td>
-											<td class="history_method"><a href="{$smarty.server.SCRIPT_NAME}" onclick="return false" class="tips" title="{l s='Generated by these following orders' mod='loyalty'}|{foreach from=$discount->orders item=myorder name=myLoop}{l s='Order #' mod='loyalty'}{$myorder.id_order} ({displayPrice price=$myorder.total_paid currency=$myorder.id_currency}) : {if $myorder.points > 0}{$myorder.points} {l s='points.' mod='loyalty'}{else}{l s='Cancelled' mod='loyalty'}{/if}{if !$smarty.foreach.myLoop.last}|{/if}{/foreach}">{l s='more...' mod='loyalty'}</a></td>
+											<td class="history_method bold">{if $discount->quantity > 0}{l s='To use'}{else}{l s='Used'}{/if}</td>
+											<td class="history_method"><a href="{$smarty.server.SCRIPT_NAME}" onclick="return false" class="tips" title="{l s='Generated by these following orders'}|{foreach from=$discount->orders item=myorder name=myLoop}{l s='Order #'}{$myorder.id_order} ({displayPrice price=$myorder.total_paid currency=$myorder.id_currency}) : {if $myorder.points > 0}{$myorder.points} {l s='points.'}{else}{l s='Cancelled'}{/if}{if !$smarty.foreach.myLoop.last}|{/if}{/foreach}">{l s='more...'}</a></td>
 										</tr>
 									{/foreach}
 									</tbody>
@@ -106,10 +106,10 @@
 								<div id="block-order-detail" class="hidden">&nbsp;</div>
 							</div>
 							{else}
-							<p class="warning">{l s='No vouchers yet.' mod='loyalty'}</p>
+							<p class="warning">{l s='No vouchers yet.'}</p>
 							{/if}
 							{else}
-							<p class="warning">{l s='No reward points yet.' mod='loyalty'}</p>
+							<p class="warning">{l s='No reward points yet.'}</p>
 							{/if}
 		</div>
 	</div>

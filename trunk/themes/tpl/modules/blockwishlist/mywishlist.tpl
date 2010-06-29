@@ -1,4 +1,4 @@
-{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account' mod='blockwishlist'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My wishlists' mod='blockwishlist'}{/capture}
+{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My wishlists'}{/capture}
 
 <div class="p-20">
 
@@ -15,20 +15,20 @@
 	</div>
 	<div class="account-right">
 		<div class="account-content-inner">
-					<h2>{l s='My wishlists' mod='blockwishlist'}</h2>
+					<h2>{l s='My wishlists'}</h2>
 					<!-- #include file="../../inc-global/errors.tpl" -->
 					{include file="$tpl_dir/inc-global/errors.tpl"}
 					
 					{if $id_customer|intval neq 0}
 						<form action="{$base_dir_ssl}modules/blockwishlist/mywishlist.php" method="post" >
 							
-								<h3>{l s='New wishlist' mod='blockwishlist'}</h3>
+								<h3>{l s='New wishlist'}</h3>
 								<input type="hidden" name="token" value="{$token|escape:'htmlall':'UTF-8'}" />
-								<label for="name">{l s='Name' mod='blockwishlist'}</label><br />
+								<label for="name">{l s='Name'}</label><br />
 								<input type="text" class="ipt"  id="name" name="name" value="{if isset($smarty.post.name) and $errors|@count > 0}{$smarty.post.name|escape:'htmlall':'UTF-8'}{/if}" />
 								<div class="clear"></div>
 								<span class="btn"><span>
-								<input type="submit" name="submitWishlist" id="submitWishlist" value="{l s='Save' mod='blockwishlist'}" class="exclusive" />
+								<input type="submit" name="submitWishlist" id="submitWishlist" value="{l s='Save'}" class="exclusive" />
 								</span></span>
 								<div class="clear"></div>
 						</form>
@@ -37,12 +37,12 @@
 							<table class="std">
 								<thead>
 									<tr>
-										<th class="first_item">{l s='Name' mod='blockwishlist'}</th>
-										<th class="item mywishlist_first">{l s='Qty' mod='blockwishlist'}</th>
-										<th class="item mywishlist_first">{l s='Viewed' mod='blockwishlist'}</th>
-										<th class="item mywishlist_second">{l s='Created' mod='blockwishlist'}</th>
-										<th class="item mywishlist_second">{l s='Direct Link' mod='blockwishlist'}</th>
-										<th class="last_item mywishlist_first">{l s='Delete' mod='blockwishlist'}</th>
+										<th class="first_item">{l s='Name'}</th>
+										<th class="item mywishlist_first">{l s='Qty'}</th>
+										<th class="item mywishlist_first">{l s='Viewed'}</th>
+										<th class="item mywishlist_second">{l s='Created'}</th>
+										<th class="item mywishlist_second">{l s='Direct Link'}</th>
+										<th class="last_item mywishlist_first">{l s='Delete'}</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -66,9 +66,9 @@
 										<td class="align_center">{$wishlists[i].counter|intval}</td>
 										<td class="align_center">{$wishlists[i].date_add|date_format:"%Y-%m-%d"}</td>
 										<td class="align_center">
-										<span class="btn"><span><a href="{$base_dir_ssl}modules/blockwishlist/view.php?token={$wishlists[i].token|escape:'htmlall':'UTF-8'}">{l s='View' mod='blockwishlist'}</a></span></span></td>
+										<span class="btn"><span><a href="{$base_dir_ssl}modules/blockwishlist/view.php?token={$wishlists[i].token|escape:'htmlall':'UTF-8'}">{l s='View'}</a></span></span></td>
 										<td class="align_center">
-											<span class="btn"><span><a href="javascript:;"onclick="return (WishlistDelete('wishlist_{$wishlists[i].id_wishlist|intval}', '{$wishlists[i].id_wishlist|intval}', '{l s='Do you really want to delete this wishlist ?' mod='blockwishlist'}'));">{l s='Delete' mod='blockwishlist'}</a></span></span>
+											<span class="btn"><span><a href="javascript:;"onclick="return (WishlistDelete('wishlist_{$wishlists[i].id_wishlist|intval}', '{$wishlists[i].id_wishlist|intval}', '{l s='Do you really want to delete this wishlist ?'}'));">{l s='Delete'}</a></span></span>
 										</td>
 									</tr>
 								{/section}

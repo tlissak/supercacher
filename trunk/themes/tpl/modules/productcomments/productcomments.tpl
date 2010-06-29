@@ -2,9 +2,9 @@
 <div class="product-comment-module">
 {if $comments}
 	{if $criterions|@count > 0}
-		<h2>{l s='Average grade' mod='productcomments'}</h2>
+		<h2>{l s='Average grade' }</h2>
 		<div style="float: left">
-			{l s='Average' mod='productcomments'}:<br />
+			{l s='Average' }:<br />
 			{section loop=6 step=1 start=1 name=average}
 				<input disabled="disabled" type="radio" name="average" {if $averageTotal|round neq 0 and $smarty.section.average.index eq $averageTotal|round}checked="checked"{/if} />
 			{/section}
@@ -26,8 +26,8 @@
 		<table class="std" style="width: 100%">
 			<thead>
 				<tr>
-					<th class="first_item" style="width:80px;">{l s='From' mod='productcomments'}</th>
-					<th class="item">{l s='Comment' mod='productcomments'}</th>
+					<th class="first_item" style="width:80px;">{l s='From' }</th>
+					<th class="item">{l s='Comment' }</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -48,18 +48,18 @@
 		</table>
 	</div>
 {else}
-	<p class="align_center">{l s='No customer comments for the moment.' mod='productcomments'}</p>
+	<p class="align_center">{l s='No customer comments for the moment.' }</p>
 {/if}
 {if $logged == true}
 
 <span class="btn btn-light"><span>
-<input type="button" id="addCommentButton" value="{l s='Add a comment' mod='productcomments'}" onclick="$('#sendComment').slideDown('slow');$(this).slideUp('slow');" />
+<input type="button" id="addCommentButton" value="{l s='Add a comment' }" onclick="$('#sendComment').slideDown('slow');$(this).slideUp('slow');" />
 </span></span>
 <div class="clear"></div>
 <form action="{$action_url}" method="post" class="std" id="sendComment" style="display:none;">
 	<div >
 		
-		<a href="javascript:closeCommentForm()">X</a> | {l s='Add a comment' mod='productcomments'} 
+		<a href="javascript:closeCommentForm()">X</a> | {l s='Add a comment' } 
 		
 		{if $criterions|@count > 0}
 		<table border="0" cellspacing="0" cellpadding="0">
@@ -84,11 +84,11 @@
 		{/if}
 		<p><textarea cols="50" class="ipt"  rows="5" name="content" id="content"></textarea></p>
 		
-			<span class="btn"><span><input class="button" name="submitMessage" value="{l s='Send' mod='productcomments'}" type="submit" /></span></span>
+			<span class="btn"><span><input class="button" name="submitMessage" value="{l s='Send' }" type="submit" /></span></span>
 		<div class="clear"></div>
 		</div>
 </form>
 {else}
-	<p class="align_center">{l s='Only registered users can post a new comment.' mod='productcomments'}</p>
+	<p class="align_center">{l s='Only registered users can post a new comment.' }</p>
 {/if}
 </div>
