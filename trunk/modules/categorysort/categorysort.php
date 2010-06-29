@@ -1,29 +1,22 @@
 <?php
-class CategorySort  extends Module {
+class CategorySort  extends Module { //TOFIX : print unlimited depth forms
 	private $_html ;
 	private $_postErrors = array();
 	public $categories ;
 	public $category_max_depth = 4 ;
 	public $assign ;
-	public $save_setting = true ;
 	public	function __construct(){ 
-		global $smarty,$cookie ;
-		
+		global $smarty,$cookie ;		
 		$this->id_lang 	= intval( $cookie->id_lang)  ;
 		$this->id_customer = intval($cookie->id_customer) ;
-		$this->category_max_depth = intval(3) ;
-		$this->smarty 	=  $smarty ; 
-		
+		$this->smarty 	=  $smarty ; 		
 		$this->name = 'categorysort';
 		$this->tab = 'tlissak modules';
-		$this->version = '0.1';	// see tofix 
+		$this->version = '1.0';	// see tofix 
 		$this->displayName = $this->l('Category Sort');
 		$this->description = $this->l('Sort your cataloge categories to display them like you want. like Category::recurseLiteCategTree ');	
-		$this->confirmUninstall = 'Are you sure you want to delete the order of the categories ?' ;				
-		$this->categories = $this->getAllCaetgories() ;
-		
-		$this->assignSmarty() ;		
-		
+		$this->confirmUninstall = $this->l('Are you sure you want to delete the order of the categories ?') ;
+		$this->assignSmarty() ;			
 		parent::__construct();
 	}
 	function getRootCategories($maxdepth){
@@ -89,12 +82,10 @@ class CategorySort  extends Module {
 		return true;
 	}
 	function installDB(){
-		if ($this->save_setting){return true ;}
 		Db::getInstance()->Execute('ALTER TABLE category ADD `sort` INT(4) NULL DEFAULT 0 AFTER id_parent ;') ;
 		return true;
 	}
 	function unistallDB(){
-		if ($this->save_setting){return true ;}
 		Db::getInstance()->Execute('ALTER TABLE category DROP  `sort`  ;') ;
 		return true;
 	}
@@ -137,14 +128,14 @@ class CategorySort  extends Module {
 			<legend><img src="../img/admin/tab-categories.gif" />'.$this->l('Category list').'</legend>
 			<table border="0" width="700" cellpadding="0" cellspacing="0" id="form">
 			<tr><td colspan="2">'.$this->l('Please specify sort order for each category (starting with 0) .<br />
-			 sub categories has there own sort order ').'.<br /><br /></td></tr>' ;
+			 sub categories has there own sort order ').'.<br /><br /></td></tr>
+			 <tr><th>'.$this->l('Category name').'<hr/></th><th>'.$this->l('Position').'<hr/></th></tr>' ;
 		
-		//TOFIX : print unlimited depth forms
 		foreach ($this->categories['children'] as $cat){
 			$this->_html .=	'<tr><td>'.$cat['name'].'</td>' ;
 			$this->_html .=	'<td>' . $this->render_form($cat) .'</td></tr>';
 			foreach ($cat['children'] as $ch){
-				$this->_html .=	'<tr><td> - '.$ch['name'].'</td>' ;
+				$this->_html .=	'<tr><td> &nbsp; &nbsp; '.$ch['name'].'</td>' ;
 				$this->_html .=	'<td>' . $this->render_form($ch) .'</td></tr>';
 			}
 		}
