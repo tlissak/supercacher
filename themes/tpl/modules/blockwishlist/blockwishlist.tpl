@@ -1,6 +1,6 @@
 <div id="wishlist_block" class="block account" style="display:none">
 	<h4>
-		<a href="{$base_dir_ssl}/modules/blockwishlist/mywishlist.php">{l s='Wishlist' mod='blockwishlist'}</a>
+		<a href="{$base_dir_ssl}/modules/blockwishlist/mywishlist.php">{l s='Wishlist'}</a>
 	</h4>
 	<div class="block_content">
 		<div id="wishlist_block_list" class="expanded">
@@ -11,7 +11,7 @@
 					<span class="quantity-formated"><span class="quantity">{$product.quantity|intval}</span>x</span>
 					<a class="cart_block_product_name"
 					href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category_rewrite)}" title="{$product.name|escape:'htmlall':'UTF-8'}">{$product.name|truncate:30:'...'|escape:'htmlall':'UTF-8'}</a>
-					<a class="ajax_cart_block_remove_link" href="javascript:;" onclick="javascript:WishlistCart('wishlist_block_list', 'delete', '{$product.id_product}', {$product.id_product_attribute}, '0', '{$token}');" title="{l s='remove this product from my wishlist' mod='blockwishlist'}"><img src="{$img_dir}icon/delete.gif" alt="{l s='Delete'}" class="icon" /></a>
+					<a class="ajax_cart_block_remove_link" href="javascript:;" onclick="javascript:WishlistCart('wishlist_block_list', 'delete', '{$product.id_product}', {$product.id_product_attribute}, '0', '{$token}');" title="{l s='remove this product from my wishlist'}"><img src="{$img_dir}icon/delete.gif" alt="{l s='Delete'}" class="icon" /></a>
 				</dt>
 				{if isset($product.attributes_small)}
 				<dd class="{if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if}">
@@ -22,7 +22,7 @@
 			</dl>
 		{else}
 			<dl class="products">
-				<dt>{l s='No products' mod='blockwishlist'}</dt>
+				<dt>{l s='No products'}</dt>
 			</dl>
 		{/if}
 		</div>
@@ -36,7 +36,7 @@
 			{/foreach}
 			</select>
 		{/if}
-			<a href="{$base_dir_ssl}modules/blockwishlist/mywishlist.php" class="exclusive" title="{l s='My wishlists' mod='blockwishlist'}">{l s='My wishlists' mod='blockwishlist'}</a>
+			<a href="{$base_dir_ssl}modules/blockwishlist/mywishlist.php" class="exclusive" title="{l s='My wishlists'}">{l s='My wishlists'}</a>
 		</p>
 	</div>
 </div>

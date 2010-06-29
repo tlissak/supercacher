@@ -5,6 +5,6 @@
 {/if}
 <!-- MODULE Block cart -->
 <div id="cart_block" >
-	<div align="center"> <img src="GUI/images/loading-1.gif" /></div>    
+	<div align="center"> <img src="{$img_dir}loading-1.gif" /></div>    
 </div>
 <!-- /MODULE Block cart -->

@@ -1,4 +1,4 @@
-{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account' mod='blockwishlist'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My wishlists' mod='blockwishlist'}{/capture}
+{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My wishlists'}{/capture}
 
 <!-- #include file="inc-global/init.php" -->
 
@@ -11,7 +11,7 @@
 
 
 
-{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account' mod='blockwishlist'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My wishlists' mod='blockwishlist'}{/capture}
+{capture name=path}<a href="{$base_dir_ssl}my-account.php">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My wishlists'}{/capture}
 
 <div class="p-20">
 
@@ -32,10 +32,10 @@
 	
 	
 							<div id="view_wishlist">
-							<h2>{l s='Wishlist' mod='blockwishlist'}</h2>
+							<h2>{l s='Wishlist'}</h2>
 							{if $wishlists}
 							<p>
-								{l s='Other wishlists of' mod='blockwishlist'} {$current_wishlist.firstname} {$current_wishlist.lastname}:
+								{l s='Other wishlists of'} {$current_wishlist.firstname} {$current_wishlist.lastname}:
 								{foreach from=$wishlists item=wishlist name=i}
 								<a href="{$base_dir_ssl}modules/blockwishlist/view.php?token={$wishlist.token}">{$wishlist.name}</a>
 									{if !$smarty.foreach.i.last}
@@ -46,36 +46,36 @@
 							{/if}
 							{if $products}
 							<div class="addresses" id="featured-products_block_center">
-								<h3>{l s='Welcome to the wishlist of' mod='blockwishlist'} {$current_wishlist.firstname} {$current_wishlist.lastname}: {$current_wishlist.name}</h3>
+								<h3>{l s='Welcome to the wishlist of'} {$current_wishlist.firstname} {$current_wishlist.lastname}: {$current_wishlist.name}</h3>
 								<p />
 								{foreach from=$products item=product name=i}
 								<ul class="address {if $smarty.foreach.i.last}last_item{elseif $smarty.foreach.i.first}first_item{/if} {if $smarty.foreach.i.index % 2}alternate_item{else}item{/if}" id="block_{$product.id_product}_{$product.id_product_attribute}">
 								<div class="ajax_block_product w-1-3 left">
 									<li class="address_title"><a href="{$link->getProductLink($product.id_product,
-									$product.link_rewrite, $product.category_rewrite)}" title="{l s='View' mod='blockwishlist'}">{$product.name|truncate:30:'...'|escape:'htmlall':'UTF-8'}</a></li>
+									$product.link_rewrite, $product.category_rewrite)}" title="{l s='View'}">{$product.name|truncate:30:'...'|escape:'htmlall':'UTF-8'}</a></li>
 									<li class="address_name">
-										<a	href="{$link->getProductlink($product.id_product, $product.link_rewrite, $product.category_rewrite)}" title="{l s='Product detail' mod='blockwishlist'}">
+										<a	href="{$link->getProductlink($product.id_product, $product.link_rewrite, $product.category_rewrite)}" title="{l s='Product detail'}">
 											<img src="{$img_prod_dir}{$product.cover}-medium.jpg" alt="{$product.name|escape:'htmlall':'UTF-8'}" />
 										</a>
 									<span class="wishlist_product_detail">
 									{if isset($product.attributes_small)}
-										<br /><a href="{$link->getProductlink($product.id_product, $product.link_rewrite, $product.category_rewrite)}" title="{l s='Product detail' mod='blockwishlist'}">{$product.attributes_small|escape:'htmlall':'UTF-8'}</a>
+										<br /><a href="{$link->getProductlink($product.id_product, $product.link_rewrite, $product.category_rewrite)}" title="{l s='Product detail'}">{$product.attributes_small|escape:'htmlall':'UTF-8'}</a>
 									{/if}
-										<br />{l s='Quantity:' mod='blockwishlist'}
+										<br />{l s='Quantity:'}
 										<input type="text" id="{$product.id_product}_{$product.id_product_attribute}" size="3" value="{$product.quantity|intval}" class="ipt" />
 										<br />
-										{l s='Priority:' mod='blockwishlist'}
+										{l s='Priority:'}
 										{if $product.priority eq 0}
-											<span style="color:darkred; ">{l s='High' mod='blockwishlist'}</span>
+											<span style="color:darkred; ">{l s='High'}</span>
 										{elseif $product.priority eq 1}
-											<span style="color:darkorange;">{l s='Medium' mod='blockwishlist'}</span>
+											<span style="color:darkorange;">{l s='Medium'}</span>
 										{else}
-											<span style="color:green;">{l s='Low' mod='blockwishlist'}</span>
+											<span style="color:green;">{l s='Low'}</span>
 										{/if}
 									</span>
 									</li>
 									<li class="address_address1 clear">
-										<span class="btn"><span><a class="button_small clear" href="{$link->getProductLink($product.id_product,  $product.link_rewrite, $product.category_rewrite)}" title="{l s='View' mod='blockwishlist'}">{l s='View' mod='blockwishlist'}</a></span></span>
+										<span class="btn"><span><a class="button_small clear" href="{$link->getProductLink($product.id_product,  $product.link_rewrite, $product.category_rewrite)}" title="{l s='View'}">{l s='View'}</a></span></span>
 										{if $product.attribute_quantity AND $product.attribute_quantity >= 1}
 										{if !$ajax}
 										<form 
@@ -91,9 +91,9 @@
 										{/if}
 										<span class="btn"><span>
 										<a href="javascript:;" class="exclusive" onclick="WishlistBuyProduct('{$token|escape:'htmlall':'UTF-8'}', '{$product.id_product}', '{$product.id_product_attribute}', '{$product.id_product}_{$product.id_product_attribute}', this, {$ajax});" 
-										title="{l s='Add to cart' mod='homefeatured'}">{l s='Add to cart' mod='blockwishlist'}</a></span></span>
+										title="{l s='Add to cart' mod='homefeatured'}">{l s='Add to cart'}</a></span></span>
 										{else}
-										<span class="btn"><span>{l s='Add to cart' mod='blockwishlist'}</span></span>
+										<span class="btn"><span>{l s='Add to cart'}</span></span>
 										{/if}
 									</li>
 								</div>
@@ -102,7 +102,7 @@
 								<p class="clear" />
 							</div>
 							{else}
-								{l s='No products' mod='blockwishlist'}
+								{l s='No products'}
 							{/if}
 							</div>
 	
