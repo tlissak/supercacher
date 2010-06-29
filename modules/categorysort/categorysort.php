@@ -15,8 +15,7 @@ class CategorySort  extends Module { //TOFIX : print unlimited depth forms
 		$this->version = '1.0';	// see tofix 
 		$this->displayName = $this->l('Category Sort');
 		$this->description = $this->l('Sort your cataloge categories to display them like you want. like Category::recurseLiteCategTree ');	
-		$this->confirmUninstall = $this->l('Are you sure you want to delete the order of the categories ?') ;
-		$this->assignSmarty() ;			
+		$this->confirmUninstall = $this->l('Are you sure you want to delete the order of the categories ?') ;				
 		parent::__construct();
 	}
 	function getRootCategories($maxdepth){
@@ -67,6 +66,7 @@ class CategorySort  extends Module { //TOFIX : print unlimited depth forms
 		, 'children' => $children);
 	}
 	public function assignSmarty(){
+		$this->categories = $this->getAllCaetgories() ;
 		$this->smarty->assign('categories_sort',$this->categories['children']);	
 	}
 	public function install(){
@@ -75,7 +75,11 @@ class CategorySort  extends Module { //TOFIX : print unlimited depth forms
 			return false;
 		return true;
 	}
-	public function hookTop(){return '' ;}
+	public function hookTop(){
+		$this->categories = $this->getAllCaetgories() ;
+		$this->assignSmarty() ;	
+		return '<!-- category sort -->'  ;
+	}
 	public function uninstall()	{
 		if (parent::uninstall() == false OR $this->unistallDB()  == false)
 			return false;			

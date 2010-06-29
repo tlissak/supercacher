@@ -34,7 +34,7 @@
 	var priceDisplayPrecision 	= parseFloat('{$priceDisplayPrecision}') ;
 	var priceDisplayPrecision 	= priceDisplayPrecision * currencyDecimals ;
 </script>
-{$HOOK_HEADER}
+{$HOOK_HEADER}{$HOOK_TOP}
 <!-- {/if} -->
 </head>
 <body {if $page_name}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if}>
@@ -85,8 +85,6 @@
     </ul>
     <div style="height:30px; background:#e5e5e5 ; border-top:#a7a7a7 2px solid; clear:both">
     	<ul class="menu-c menu">
-    	
-       
         {foreach from=$categories_sort item='gcat' name=gsubcategories}
 		<li><a href="{$link->getCategoryLink($gcat.id, $gcat.link_rewrite)|escape:'htmlall':'UTF-8'}" title="{$gcat.name|escape:'htmlall':'UTF-8'}">{$gcat.name|htmlspecialchars}</a> 
             {if $gcat.children|@count > 0}
