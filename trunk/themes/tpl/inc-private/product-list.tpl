@@ -9,7 +9,7 @@
 	<!-- product image -->
 	<div class="center img-box"><a href="{$product.link|escape:'htmlall':'UTF-8'}"
 		title="{$product.name|escape:'htmlall':'UTF-8'}"> <img
-		src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'medium')}"
+		src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'pdt')}"
 		alt="{$product.legend|escape:'htmlall':'UTF-8'}" /></a>
 	
 	</div>
