@@ -1,3 +1,7 @@
+- adni larger pics
+- cats paging on chrom
+- side caart img on chrom
+- produc thumb issue on chrom
 - loginbox{when is loged : show user info nicely}
 - search.php {productList:show-currect}
 - product.php{ addRightColmun}
